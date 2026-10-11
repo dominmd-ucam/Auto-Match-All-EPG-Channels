@@ -13,7 +13,8 @@ import time
 
 logger = logging.getLogger("plugins.auto_match_all")
 
-PLUGIN_KEY = "auto_match_all_channels"
+# Dispatcharr usa el nombre de la carpeta (minusculas, espacios -> _) como clave del plugin.
+PLUGIN_KEY = os.path.basename(os.path.dirname(os.path.abspath(__file__))).lower().replace(" ", "_")
 
 _lock = threading.Lock()
 _state = {

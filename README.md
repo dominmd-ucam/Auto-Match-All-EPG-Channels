@@ -43,13 +43,13 @@ Detalles de implementacion:
 
 ## Instalacion
 
-- [ ] Descarga `auto_match_all_channels.zip` (el zip debe contener la carpeta `auto_match_all_channels/` con `plugin.json` y `plugin.py`).
+- [ ] En este repositorio pulsa **Code > Download ZIP** (el zip que genera GitHub contiene `plugin.json` y `plugin.py`).
 - [ ] En Dispatcharr, abre la pagina de **Plugins** y pulsa **Import**.
-- [ ] Sube el zip.
+- [ ] Sube el zip descargado.
 - [ ] Activa el plugin (los plugins vienen desactivados por defecto).
 - [ ] Ajusta las opciones y pulsa **Run Auto Match All Channels**.
 
-Instalacion manual: copia la carpeta `auto_match_all_channels/` a `/app/data/plugins/` y recarga la lista de plugins.
+Instalacion manual: crea una carpeta dentro de `/app/data/plugins/` (por ejemplo `auto_match_all_channels/`), copia en ella `plugin.json` y `plugin.py` y recarga la lista de plugins.
 
 ---
 
@@ -105,9 +105,9 @@ La lista de canales de la interfaz se refresca automaticamente al finalizar.
 ## Estructura
 
 ```
-auto_match_all_channels/
-  plugin.json    Manifiesto: nombre, version, campos y acciones
-  plugin.py      Clase Plugin con la logica
+plugin.json    Manifiesto: nombre, version, campos y acciones
+plugin.py      Clase Plugin con la logica
+README.md      Esta documentacion
 ```
 
 ## Recomendaciones
