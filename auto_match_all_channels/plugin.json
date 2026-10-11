@@ -1,0 +1,80 @@
+{
+  "name": "Auto Match All Channels",
+  "version": "1.0.0",
+  "description": "Ejecuta el Auto Match de EPG de forma masiva, canal a canal, sobre todos los canales sin EPG (o todos), con filtro por grupo, progreso y resumen final.",
+  "author": "Domingo",
+  "help_url": "https://github.com/Dispatcharr/Dispatcharr/blob/main/Plugins.md",
+  "fields": [
+    {
+      "id": "only_without_epg",
+      "label": "Solo canales sin EPG asignado",
+      "type": "boolean",
+      "default": true,
+      "help_text": "Activado: solo canales sin EPG. Desactivado: todos los canales (puede reasignar EPG ya existente)."
+    },
+    {
+      "id": "group_filter",
+      "label": "Filtrar por grupo de canales",
+      "type": "string",
+      "default": "",
+      "placeholder": "Deportes, Cine",
+      "help_text": "Nombres de grupo separados por comas (sin distinguir mayusculas). Vacio = todos los grupos."
+    },
+    {
+      "id": "mode",
+      "label": "Modo de matching",
+      "type": "select",
+      "default": "individual",
+      "options": [
+        {"value": "individual", "label": "Individual (igual que el boton de cada canal, uno a uno)"},
+        {"value": "bulk", "label": "Masivo (umbrales conservadores, mas rapido)"}
+      ],
+      "help_text": "Individual usa exactamente la misma funcion que el boton Auto Match de un canal."
+    },
+    {
+      "id": "max_channels",
+      "label": "Maximo de canales por ejecucion",
+      "type": "number",
+      "default": 0,
+      "help_text": "0 = sin limite. Util para probar con pocos canales."
+    },
+    {
+      "id": "dry_run",
+      "label": "Simulacion (no guarda cambios)",
+      "type": "boolean",
+      "default": false,
+      "help_text": "Solo disponible en modo Masivo: calcula coincidencias y las cuenta sin asignarlas."
+    }
+  ],
+  "actions": [
+    {
+      "id": "run_auto_match_all",
+      "label": "Run Auto Match All Channels",
+      "description": "Recorre los canales segun la configuracion y ejecuta Auto Match en cada uno.",
+      "button_label": "Run Auto Match All Channels",
+      "button_variant": "filled",
+      "button_color": "blue",
+      "confirm": {
+        "required": true,
+        "title": "Ejecutar Auto Match masivo?",
+        "message": "Se ejecutara el Auto Match sobre los canales seleccionados en segundo plano. Puede tardar varios minutos."
+      }
+    },
+    {
+      "id": "status",
+      "label": "Ver estado / ultimo resultado",
+      "description": "Muestra el progreso actual o el resumen de la ultima ejecucion.",
+      "button_label": "Ver estado",
+      "button_variant": "outline",
+      "button_color": "gray"
+    },
+    {
+      "id": "stop",
+      "label": "Detener",
+      "description": "Detiene la ejecucion en curso tras terminar el canal actual.",
+      "button_label": "Detener",
+      "button_variant": "outline",
+      "button_color": "red"
+    }
+  ]
+}
