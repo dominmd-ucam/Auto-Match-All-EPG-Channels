@@ -43,6 +43,8 @@ El boton "Auto Match" de la edicion individual de un canal solo trabaja con un c
 
 ---
 
+<a id="como-funciona-por-dentro"></a>
+
 ## ⚙️ Como funciona por dentro
 
 El boton individual de Dispatcharr sigue esta cadena:
@@ -70,6 +72,8 @@ Detalles de implementacion:
 
 ---
 
+<a id="instalacion"></a>
+
 ## 📦 Instalacion
 
 - [ ] En este repositorio pulsa **Code > Download ZIP** (el zip que genera GitHub contiene `plugin.json` y `plugin.py`).
@@ -81,6 +85,8 @@ Detalles de implementacion:
 Instalacion manual: crea una carpeta dentro de `/app/data/plugins/` (por ejemplo `auto_match_all_channels/`), copia en ella `plugin.json` y `plugin.py` y recarga la lista de plugins.
 
 ---
+
+<a id="opciones"></a>
 
 ## 🔧 Opciones
 
@@ -98,6 +104,8 @@ Instalacion manual: crea una carpeta dentro de `/app/data/plugins/` (por ejemplo
 - **Masivo**: usa la logica de la tarea interna `match_epg_channels` (umbrales conservadores), procesando todos los canales de una vez. Mas rapido, con menos matches por nombre.
 
 ---
+
+<a id="acciones"></a>
 
 ## ▶️ Acciones
 
