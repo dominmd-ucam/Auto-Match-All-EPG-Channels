@@ -14,6 +14,22 @@ El boton "Auto Match" de la edicion individual de un canal solo trabaja con un c
 - Permite filtrar por grupo de canales.
 - Trabaja en segundo plano, asi que la interfaz de Dispatcharr no se bloquea.
 
+## Capturas
+
+**Plugin instalado en Dispatcharr**
+
+![Plugin instalado en la pagina My Plugins](docs/plugins-page.png)
+
+**Configuracion**
+
+![Opciones del plugin](docs/settings.png)
+
+**Acciones**
+
+![Acciones del plugin: ejecutar, ver estado y detener](docs/actions.png)
+
+---
+
 ## Como funciona por dentro
 
 El boton individual de Dispatcharr sigue esta cadena:
