@@ -1,10 +1,23 @@
+<div align="center">
+
 # Auto Match All Channels
 
-Plugin para [Dispatcharr](https://github.com/Dispatcharr/Dispatcharr) que ejecuta el **Auto Match de EPG de forma masiva**, canal a canal, sobre todos los canales (o solo los que no tienen EPG asignada), con filtro por grupo, progreso y resumen final.
+**Auto Match de EPG masivo para [Dispatcharr](https://github.com/Dispatcharr/Dispatcharr)**
+
+Recorre tus canales uno a uno y ejecuta el mismo Auto Match que el boton individual,
+con filtro por grupo, progreso en vivo y resumen final.
+
+![Dispatcharr](https://img.shields.io/badge/Dispatcharr-plugin-1f6feb)
+![Python](https://img.shields.io/badge/Python-3-3776ab?logo=python&logoColor=white)
+![Version](https://img.shields.io/badge/version-1.0.0-2ea043)
+
+[Instalacion](#instalacion) · [Opciones](#opciones) · [Acciones](#acciones) · [Como funciona](#como-funciona-por-dentro)
+
+</div>
 
 ---
 
-## Que hace
+## ✨ Que hace
 
 El boton "Auto Match" de la edicion individual de un canal solo trabaja con un canal cada vez. Este plugin automatiza ese proceso:
 
@@ -14,7 +27,7 @@ El boton "Auto Match" de la edicion individual de un canal solo trabaja con un c
 - Permite filtrar por grupo de canales.
 - Trabaja en segundo plano, asi que la interfaz de Dispatcharr no se bloquea.
 
-## Capturas
+## 📸 Capturas
 
 **Plugin instalado en Dispatcharr**
 
@@ -30,7 +43,7 @@ El boton "Auto Match" de la edicion individual de un canal solo trabaja con un c
 
 ---
 
-## Como funciona por dentro
+## ⚙️ Como funciona por dentro
 
 El boton individual de Dispatcharr sigue esta cadena:
 
@@ -57,7 +70,7 @@ Detalles de implementacion:
 
 ---
 
-## Instalacion
+## 📦 Instalacion
 
 - [ ] En este repositorio pulsa **Code > Download ZIP** (el zip que genera GitHub contiene `plugin.json` y `plugin.py`).
 - [ ] En Dispatcharr, abre la pagina de **Plugins** y pulsa **Import**.
@@ -69,7 +82,7 @@ Instalacion manual: crea una carpeta dentro de `/app/data/plugins/` (por ejemplo
 
 ---
 
-## Opciones
+## 🔧 Opciones
 
 | Opcion | Por defecto | Descripcion |
 |---|---|---|
@@ -86,7 +99,7 @@ Instalacion manual: crea una carpeta dentro de `/app/data/plugins/` (por ejemplo
 
 ---
 
-## Acciones
+## ▶️ Acciones
 
 | Accion | Descripcion |
 |---|---|
@@ -94,7 +107,7 @@ Instalacion manual: crea una carpeta dentro de `/app/data/plugins/` (por ejemplo
 | Ver estado | Muestra el progreso actual o el resumen de la ultima ejecucion. |
 | Detener | Para la ejecucion tras terminar el canal actual. |
 
-## Progreso y resultado
+## 📊 Progreso y resultado
 
 Durante la ejecucion se envian avisos a la interfaz por WebSocket, por ejemplo:
 
@@ -118,7 +131,7 @@ La lista de canales de la interfaz se refresca automaticamente al finalizar.
 
 ---
 
-## Estructura
+## 🗂️ Estructura
 
 ```
 plugin.json    Manifiesto: nombre, version, campos y acciones
@@ -126,18 +139,18 @@ plugin.py      Clase Plugin con la logica
 README.md      Esta documentacion
 ```
 
-## Recomendaciones
+## 💡 Recomendaciones
 
 - La primera vez, prueba con "Maximo de canales" a 5 o 10.
 - Revisa que tienes fuentes EPG activas y descargadas antes de lanzarlo; el matching solo usa EPG de fuentes activas.
 - Con miles de canales el modo Individual puede tardar bastante. Puedes seguir el avance con "Ver estado".
 - Usa la simulacion (modo Masivo) para ver cuantos matches saldrian antes de guardar cambios.
 
-## Compatibilidad
+## ✅ Compatibilidad
 
 Escrito sobre el codigo de la rama `main` de Dispatcharr (`apps/channels/epg_matching.py`). El plugin depende de funciones internas, asi que una version futura de Dispatcharr que las renombre o cambie podria requerir actualizar el plugin.
 
-## Documentacion util
+## 📚 Documentacion util
 
 - [Documentacion oficial de plugins](https://github.com/Dispatcharr/Dispatcharr/blob/main/Plugins.md)
 - [Repositorio de Dispatcharr](https://github.com/Dispatcharr/Dispatcharr)
